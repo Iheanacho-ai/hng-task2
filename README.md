@@ -14,9 +14,9 @@ Before you get started, make sure you have the following installed on your syste
 
 1. Clone the repository to your local machine:
 
-   ```bash
+```bash
     git clone https://github.com/Iheanacho-ai/hng-task2.git
-   ```
+```
 2. Navigate to the project directory:
 
 ```
@@ -49,7 +49,7 @@ npm start
 The API should now be running on the specified port (default is 3000).
 
 ## API Endpoints, Use Cases, and Error Handling
-See [documentation](https://github.com/Iheanacho-ai/hng-task2/blob/main/docs/api_documentation.md).
+See [documentation](https://github.com/Iheanacho-ai/hng-task2/blob/main/docs/DOCUMENTATION.md).
 
 
 ## Conclusion
