@@ -123,7 +123,7 @@ PUT https://api.example.com/persons/1
 }
 ```
 
-**Delete a Person**
+## Delete a Person
 
 **URL:** `/persons/{id}`
 **HTTP Method:** `DELETE`
