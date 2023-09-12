@@ -25,9 +25,7 @@ POST https://api.example.com/persons
 
 ```json
 {
-  "name": "John Doe",
-  "age": 30,
-  "email": "john.doe@example.com"
+  "name": "John Doe"
 }
 ```
 
@@ -36,9 +34,7 @@ POST https://api.example.com/persons
 ```json
 {
   "id": 1,
-  "name": "John Doe",
-  "age": 30,
-  "email": "john.doe@example.com"
+  "name": "John Doe"
 }
 ```
 
@@ -61,15 +57,11 @@ GET https://api.example.com/persons
 [
   {
     "id": 1,
-    "name": "John Doe",
-    "age": 30,
-    "email": "john.doe@example.com"
+    "name": "John Doe"
   },
   {
     "id": 2,
-    "name": "Jane Smith",
-    "age": 25,
-    "email": "jane.smith@example.com"
+    "name": "Jane Smith"
   }
 ]
 ```
@@ -87,9 +79,7 @@ GET https://api.example.com/persons/1
 ```json
 {
   "id": 1,
-  "name": "John Doe",
-  "age": 30,
-  "email": "john.doe@example.com"
+  "name": "John Doe"
 }
 ```
 
@@ -107,9 +97,7 @@ PUT https://api.example.com/persons/1
 ```
 ```json
 {
-  "name": "Updated John Doe",
-  "age": 31,
-  "email": "updated.john.doe@example.com"
+  "name": "Updated John Doe"
 }
 ```
 **Example Response:**
@@ -117,9 +105,7 @@ PUT https://api.example.com/persons/1
 ```json
 {
   "id": 1,
-  "name": "Updated John Doe",
-  "age": 31,
-  "email": "updated.john.doe@example.com"
+  "name": "Updated John Doe"
 }
 ```
 
