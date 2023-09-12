@@ -5,10 +5,6 @@ This documentation provides details on how to use the Person Management REST API
 
 The base URL for accessing the API is: `https://api.example.com/persons`
 
-## Authentication
-
-Authentication is required for some operations. Please refer to the specific endpoints for authentication requirements.
-
 ## API Endpoints
 These are the endpoints.
 ### Create a New Person
