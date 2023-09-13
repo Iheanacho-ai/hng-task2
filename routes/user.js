@@ -6,23 +6,25 @@ const {
     deleteUser,
     updateUser
 
-} = require('./controllers/userController')
+} = require('../controllers/userController')
 
 const router = express.Router()
 
-//GET all workouts
-router.get('/', getUsers)
+// GET all users
+router.get('/', getUsers);
 
-//GET a single workout
-router.get('/:id', getUser)
+// GET a single user by ID
+router.get('/:id', getUser);
 
-//POST a new workout
-router.post('/', createUser)
+// POST a new user
+router.post('/', createUser);
 
-//DELETE a workout
-router.delete('/:id', deleteUser)
+// DELETE a user by ID
+router.delete('/:id', deleteUser);
 
-//UPDATE a new workout
-router.patch('/:id', updateUser  )
+// UPDATE a user by ID
+router.patch('/:id', updateUser);
+
+
 
 module.exports = router

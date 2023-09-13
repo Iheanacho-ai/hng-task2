@@ -1,4 +1,4 @@
-const User = require('./models/userModel')
+const User = require('../models/userModel')
 const mongoose = require('mongoose')
 
 //get all users
@@ -19,17 +19,23 @@ const getUsers = async(req, res) => {
 const getUser = async(req, res) => {
     const {id} = req.params
 
-    if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(404).json({error: 'No such user'})
+    try {
+        if(!mongoose.Types.ObjectId.isValid(id)){
+            return res.status(404).json({error: 'Id is invalid'})
+        }
+
+        user = await User.findById({_id: id})
+       
+        
+        
+        if(!user){
+            return res.status(404).json({error: 'No such user'})
+        }
+        
+        res.status(200).json(user)
+    } catch (error) {
+        res.json(400).json({error: error.message})
     }
-
-    const user =  await User.findById(id)
-
-    if(!user){
-        return res.status(404).json({error: 'No such user'})
-    }
-
-    res.status(200).json(user)
 
 }
 //create a new user
@@ -48,18 +54,19 @@ const createUser = async(req, res) => {
 const deleteUser = async(req, res) => {
     const {id} = req.params
 
-    if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(404).json({error: 'No such user id'})
-    }
-    
-    //add delete to db
     try {
-        const user = await User.findOneAndDelete({_id: id})
+        //check if the id is valid
+        if(!mongoose.Types.ObjectId.isValid(id)){
+            return res.status(404).json({error: 'Id is invalid'})
+        }
+
+        user = await User.findOneAndDelete({_id: id})
+       
         
         if(!user){
             return res.status(404).json({error: 'No such user'})
         }
-
+        
         res.status(200).json(user)
     } catch (error) {
         res.json(400).json({error: error.message})
@@ -69,14 +76,18 @@ const deleteUser = async(req, res) => {
 const updateUser = async(req, res) => {
     const {id} = req.params
 
-    if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(404).json({error: 'No such user'})
-    }
     //add delete to db
     try {
-        const user = await User.findOneAndUpdate({_id: id}, {
+
+        if(!mongoose.Types.ObjectId.isValid(id)){
+            return res.status(404).json({error: 'Id is invalid'})
+        }
+
+        user = await User.findOneAndUpdate({_id: id}, {
             ...req.body
         })
+    
+        
         
         if(!user){
             return res.status(404).json({error: 'No such user'})
