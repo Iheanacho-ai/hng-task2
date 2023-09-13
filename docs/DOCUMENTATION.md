@@ -3,7 +3,7 @@ This documentation provides details on how to use the Person Management REST API
 
 ### Base URL
 
-The base URL for accessing the API is: `https://api.example.com/persons`
+The base URL for accessing the API is: `https://amara-hngtask2.onrender.com`
 
 ## API Endpoints
 These are the endpoints.
@@ -17,7 +17,7 @@ These are the endpoints.
 #### Example Request:
 
 
-POST https://api.example.com/persons
+POST https://amara-hngtask2.onrender.com/api/users
 
 ```json
 {
@@ -29,8 +29,11 @@ POST https://api.example.com/persons
 
 ```json
 {
-  "id": 1,
-  "name": "John Doe"
+  "name": "Jess",
+  "_id": "1",
+  "createdAt": "2023-09-13T23:39:22.237Z",
+  "updatedAt": "2023-09-13T23:39:22.237Z",
+  "__v": 0
 }
 ```
 
@@ -44,7 +47,7 @@ POST https://api.example.com/persons
 **Example Request:**
 
 ```http
-GET https://api.example.com/persons
+GET https://amara-hngtask2.onrender.com/api/users
 ```
 
 **Example Response:**
@@ -52,31 +55,40 @@ GET https://api.example.com/persons
 ```json
 [
   {
-    "id": 1,
-    "name": "John Doe"
+    "_id": "1",
+    "name": "John Doe",
+    "createdAt": "2023-09-13T23:39:22.237Z",
+    "updatedAt": "2023-09-13T23:39:22.237Z",
+    "__v": 0
   },
   {
-    "id": 2,
-    "name": "Jane Smith"
-  }
+    "_id": "2",
+    "name": "Jane Smmith",
+    "createdAt": "2023-09-13T00:56:23.087Z",
+    "updatedAt": "2023-09-13T22:48:58.721Z",
+    "__v": 0
+  },
 ]
 ```
 
 ## Get a Specific Person
-**URL:** `/persons/{id}`
+**URL:** `/users/{id}`
 **HTTP Method:** `GET`
 **Response:** Returns the person with the specified `id`.
 
 **Example Request:**
 ```http
-GET https://api.example.com/persons/1
+GET https://amara-hngtask2.onrender.com/api/users/1
 ```
 **Example Response:**
 ```json
 {
-  "id": 1,
-  "name": "John Doe"
-}
+  "_id": "1",
+  "name": "John Doe",
+  "createdAt": "2023-09-13T23:39:22.237Z",
+  "updatedAt": "2023-09-13T23:39:22.237Z",
+  "__v": 0
+  },
 ```
 
 ## Update a Person
@@ -89,7 +101,7 @@ GET https://api.example.com/persons/1
 **Example Request:**
 
 ```http
-PUT https://api.example.com/persons/1
+PUT https://amara-hngtask2.onrender.com/api/users/1
 ```
 ```json
 {
@@ -99,33 +111,32 @@ PUT https://api.example.com/persons/1
 **Example Response:**
 
 ```json
-{
-  "id": 1,
-  "name": "Updated John Doe"
-}
+ {
+    "_id": "1",
+    "name": "Updated John Doe",
+    "createdAt": "2023-09-13T00:56:23.087Z",
+    "updatedAt": "2023-09-13T22:48:58.721Z",
+    "__v": 0
+  }
 ```
 
 ## Delete a Person
 
-**URL:** `/persons/{id}`
+**URL:** `/users/{id}`
 **HTTP Method:** `DELETE`
 **Response:** Returns a success message upon successful deletion.
 
 **Example Request:**
 
 ```http
-DELETE https://api.example.com/persons/1
+DELETE https://amara-hngtask2.onrender.com/api/users/1
 ```
 **Example Response:**
 ```json
 {
-  "message": "Person with ID 1 has been deleted successfully."
+  "message": "User has been deleted successfully."
 }
 ```
-
-## Error Handling
-The API returns appropriate error codes and error messages for invalid requests or server errors.
-
 
 ## Conclusion
 This documentation provides an overview of the CRUD operations available through the Person Management REST API. 
