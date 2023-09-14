@@ -49,7 +49,7 @@ npm start
 The API should now be running on the specified port (default is 3000).
 
 ## API Endpoints, Use Cases, and Error Handling
-See [documentation](https://github.com/Iheanacho-ai/hng-task2/blob/main/docs/DOCUMENTATION.md).
+See [Documentation](https://github.com/Iheanacho-ai/hng-task2/blob/main/docs/DOCUMENTATION.md).
 
 
 ## Conclusion

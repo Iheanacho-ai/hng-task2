@@ -1,23 +1,23 @@
-# Person Management REST API Documentation
-This documentation provides details on how to use the Person Management REST API for CRUD operations on a list of persons. The API allows you to create, read, update, and delete person records.
+# User Management REST API Documentation
+This documentation provides details on how to use the User Management REST API for CRUD operations on a list of Users. The API allows you to create, read, update, and delete User records.
 
 ### Base URL
 
-The base URL for accessing the API is: `https://amara-hngtask2.onrender.com`
+The base URL for accessing the API is: `https://amara-hngtask2.onrender.com/api`
 
 ## API Endpoints
 These are the endpoints.
-### Create a New Person
+### Create a New User
 
-- **URL**: `/persons`
+- **URL**: `/`
 - **HTTP Method**: `POST`
-- **Request Body**: JSON object representing the person to be created.
-- **Response**: Returns the created person object with a unique identifier.
+- **Request Body**: JSON object representing the User to be created.
+- **Response**: Returns the created User object with a unique identifier.
 
 #### Example Request:
 
 
-POST https://amara-hngtask2.onrender.com/api/users
+POST https://amara-hngtask2.onrender.com/api
 
 ```json
 {
@@ -37,17 +37,17 @@ POST https://amara-hngtask2.onrender.com/api/users
 }
 ```
 
-## Get All Persons
+## Get All Users
 
-**URL: /persons**
+**URL: /**
 **HTTP Method: GET**
-**Response:** Returns a list of all persons.
+**Response:** Returns a list of all Users.
 
 
 **Example Request:**
 
 ```http
-GET https://amara-hngtask2.onrender.com/api/users
+GET https://amara-hngtask2.onrender.com/api
 ```
 
 **Example Response:**
@@ -71,14 +71,14 @@ GET https://amara-hngtask2.onrender.com/api/users
 ]
 ```
 
-## Get a Specific Person
-**URL:** `/users/{id}`
+## Get a Specific User
+**URL:** `/{id}`
 **HTTP Method:** `GET`
-**Response:** Returns the person with the specified `id`.
+**Response:** Returns the user with the specified `id`.
 
 **Example Request:**
 ```http
-GET https://amara-hngtask2.onrender.com/api/users/1
+GET https://amara-hngtask2.onrender.com/api/1
 ```
 **Example Response:**
 ```json
@@ -91,17 +91,17 @@ GET https://amara-hngtask2.onrender.com/api/users/1
   },
 ```
 
-## Update a Person
+## Update a User
 
-**URL:** `/persons/{id}`
+**URL:** `/{id}`
 **HTTP Method:** `PUT`
-**Request Body:** JSON object with updated person information.
-**Response:** Returns the updated person object.
+**Request Body:** JSON object with updated User information.
+**Response:** Returns the updated user object.
 
 **Example Request:**
 
 ```http
-PUT https://amara-hngtask2.onrender.com/api/users/1
+PUT https://amara-hngtask2.onrender.com/api/1
 ```
 ```json
 {
@@ -120,16 +120,16 @@ PUT https://amara-hngtask2.onrender.com/api/users/1
   }
 ```
 
-## Delete a Person
+## Delete a User
 
-**URL:** `/users/{id}`
+**URL:** `/{id}`
 **HTTP Method:** `DELETE`
 **Response:** Returns a success message upon successful deletion.
 
 **Example Request:**
 
 ```http
-DELETE https://amara-hngtask2.onrender.com/api/users/1
+DELETE https://amara-hngtask2.onrender.com/api/1
 ```
 **Example Response:**
 ```json
@@ -139,7 +139,7 @@ DELETE https://amara-hngtask2.onrender.com/api/users/1
 ```
 
 ## Conclusion
-This documentation provides an overview of the CRUD operations available through the Person Management REST API. 
+This documentation provides an overview of the CRUD operations available through the User Management REST API. 
 
-This Markdown document outlines the endpoints, request and response examples, and general information about the REST API for managing persons. You can customize it further to include additional details, authentication mechanisms, and any other specific information relevant to your API.
+This Markdown document outlines the endpoints, request and response examples, and general information about the REST API for managing Users. You can customize it further to include additional details, authentication mechanisms, and any other specific information relevant to your API.
 
