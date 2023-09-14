@@ -25,6 +25,6 @@ router.delete('/:id', deleteUser);
 // UPDATE a user by ID
 router.patch('/:id', updateUser);
 
-
+router.put('/:id', updateUser);
 
 module.exports = router
