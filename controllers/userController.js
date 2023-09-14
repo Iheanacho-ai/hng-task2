@@ -85,7 +85,7 @@ const updateUser = async(req, res) => {
 
         const user = await User.findOneAndUpdate({_id: id}, {
             ...req.body
-        })
+        }, {new: true})
     
         
         
