@@ -83,7 +83,7 @@ const updateUser = async(req, res) => {
             return res.status(404).json({error: 'Id is invalid'})
         }
 
-        user = await User.findOneAndUpdate({_id: id}, {
+        const user = await User.findOneAndUpdate({_id: id}, {
             ...req.body
         })
     
